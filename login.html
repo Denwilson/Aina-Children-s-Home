@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aina Children Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff6f00, #ffbb33);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2 {
+            color: #ff6f00;
+            font-size: 24px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            text-align: left;
+            font-weight: bold;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        input:focus {
+            border-color: #ff6f00;
+            outline: none;
+            background-color: #ffe5b4;
+        }
+
+        button {
+            background: #ff6f00;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #e65c00;
+        }
+
+        .forgot-password, .signup-link {
+            margin-top: 10px;
+        }
+
+        .forgot-password a, .signup-link a {
+            color: #ff6f00;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .forgot-password a:hover, .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .register-form {
+            display: none;
+        }
+    </style>
+    <script>
+        function showRegisterForm() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="login-form">
+            <h2>Welcome Back</h2>
+            <p>Login to continue</p>
+            <form action="staff.html" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+            <p class="signup-link">Don't have an account? <a onclick="showRegisterForm()">Sign Up</a></p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="register-form" class="register-form">
+            <h2>Create Account</h2>
+            <p>Join us today</p>
+            <form action="login.html" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <p class="signup-link">Already have an account? <a onclick="showLoginForm()">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

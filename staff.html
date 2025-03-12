@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - Aina Children Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff6f00, #ffbb33);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: #ff6f00;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #ff6f00;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        h3 {
+            color: #ff6f00;
+        }
+
+        .options {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .options a, .options button {
+            text-decoration: none;
+            color: white;
+            background: #ff6f00;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .options a:hover, .options button:hover {
+            background: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Staff Dashboard</div>
+    <div class="container">
+        <p>Welcome to the Staff Dashboard of Aina Children Home. Here, you can manage organizational tasks and access important information.</p>
+        
+        <div class="menu">
+            <a href="#children">Manage Children</a>
+            <a href="#staff">Manage Staff</a>
+            <a href="#reports">Reports</a>
+            <a href="#announcements">Announcements</a>
+            <a href="#settings">Settings</a>
+            <a href="#logout">Logout</a>
+        </div>
+
+        <div id="children" class="section">
+            <h3>Manage Registered Children</h3>
+            <p>View, edit, or add new children to the system.</p>
+            <div class="options">
+                <a href="view_children.html">View Children</a>
+                <a href="add_child.html">Add Child</a>
+                <button onclick="addChild('login.html')">Add Child</button>
+            </div>
+        </div>
+
+        <div id="staff" class="section">
+            <h3>Manage Staff</h3>
+            <p>View and approve staff members.</p>
+            <div class="options">
+                <a href="view_staff.html">View Staff</a>
+                <a href="approve_staff.html">Approve Staff</a>
+            </div>
+        </div>
+
+        <div id="reports" class="section">
+            <h3>Generate Reports</h3>
+            <p>View and generate reports on children and staff.</p>
+            <div class="options">
+                <button onclick="generateReport()">Generate Report</button>
+            </div>
+        </div>
+
+        <div id="announcements" class="section">
+            <h3>Announcements</h3>
+            <p>Create and view announcements.</p>
+            <div class="options">
+                <button onclick="makeAnnouncement()">Make Announcement</button>
+            </div>
+        </div>
+
+        <div id="settings" class="section">
+            <h3>Settings & Profile Management</h3>
+            <p>Update personal details and change preferences.</p>
+            <div class="options">
+                <button onclick="updateSettings()">Update Settings</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

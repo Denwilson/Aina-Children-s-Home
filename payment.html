@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment - Aina Children Home</title>
+    <link rel="stylesheet" href="payment.css">
+    <script defer src="payment.js"></script>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Donate to Aina Children Home</h2>
+        <p>Secure payment through our trusted system.</p>
+
+        <form action="#" method="post">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="Enter your Email Address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" min="10" placeholder="Star with your Country Code, E.g +254.." required="+">
+
+            <label for="country">Choose Country:</label>
+            <select id="country" name="country" required style="cursor: pointer;">
+                <option value="" disabled selected>Select Country</option>
+                <option value="AR">Argentina</option>
+                <option value="AU">Australia</option>
+                <option value="BR">Brazil</option>
+                <option value="CA">Canada</option>
+                <option value="CN">China</option>
+                <option value="DK">Denmark</option>
+                <option value="EG">Egypt</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IT">Italy</option>
+                <option value="JP">Japan</option>
+                <option value="KE">Kenya</option>
+                <option value="MX">Mexico</option>
+                <option value="NL">Netherlands</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NG">Nigeria</option>
+                <option value="NO">Norway</option>
+                <option value="PH">Philippines</option>
+                <option value="PL">Poland</option>
+                <option value="RU">Russia</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="ZA">South Africa</option>
+                <option value="KR">South Korea</option>
+                <option value="ES">Spain</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="TZ">Tanzania</option>
+                <option value="TH">Thailand</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="UK">United Kingdom</option>
+                <option value="US">United States</option>
+            </select>
+
+            <label for="currency">Choose Currency:</label>
+            <select id="currency" name="currency" required style="cursor: pointer;">
+                <option value="" disabled selected>Choose Currency</option>
+                <option value="USD">US Dollar ($)</option>
+                <option value="KES">Kenyan Shilling (KES)</option>
+                <option value="EUR">Euro (€)</option>
+                <option value="GBP">British Pound (£)</option>
+                <option value="INR">Indian Rupee (₹)</option>
+            </select>
+
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" min="100" placeholder="Enter the amount to Donate" required>
+
+            <label>Payment Method:</label>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment-method" required>
+                    <img src="paypal.png" alt="PayPal">
+                </label>
+                <label>
+                    <input type="radio" name="payment-method">
+                    <img src="mpesa.png" alt="mpesa">
+                </label>
+                <label>
+                    <input type="radio" name="payment-method">
+                    <img src="money1.jpg" alt="Mobile Money"> 
+                </label>
+            </div>
+
+            <div id="payment-details"></div>
+
+            <button type="submit">Proceed to Payment</button>
+
+            <p class="secure-info">All transactions are securely encrypted.</p>
+        </form>
+    </div>
+</body>
+</html>

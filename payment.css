@@ -1,0 +1,98 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff6f00, #ffbb33);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    height: 100vh;
+    margin: 0;
+    padding: 20px; /* Added padding to prevent content from being cut off */
+    overflow-y: auto; /* Enables scrolling if needed */
+}
+
+/* Payment Container */
+.payment-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 450px;
+    text-align: center;
+    margin-top: 30px;
+}
+h2 {
+    color: #ff6f00;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+p {
+    color: #0070ba;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+    margin-top: 10px;
+}
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    
+}
+input:focus {
+    border-color: #ff6f00;
+    outline: none;
+    background-color: #ffe5b4;
+}
+.payment-options {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 10px;
+    margin: 15px;
+    margin-top: 10px;
+}
+.payment-options label {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.payment-options img {
+    width: 50px;
+    height: 50px;
+}
+button {
+    background: #28a745;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+button:hover {
+    background: #218838;
+}
+.secure-info {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}

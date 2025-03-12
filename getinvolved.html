@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Aina Children Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff6f00, #ffbb33);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            color: #ff6f00;
+            font-size: 24px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            text-align: left;
+            font-weight: bold;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        button {
+            background: #ff6f00;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #e65c00;
+        }
+    </style>
+    <script>
+        function updateFormAction() {
+            var role = document.getElementById("role").value;
+            var form = document.getElementById("get-involved-form");
+            
+            if (role === "staff") {
+                form.action = "login.html";
+            } else if (role === "support") {
+                form.action = "payment.html";
+            } else if (role === "volunteer") {
+                form.action = "volunteer.html";
+            } else if (role === "sponsor") {
+                form.action = "sponsor.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Get Involved</h2>
+        <p>Join our team and make a difference</p>
+        <form id="get-involved-form" action="payment.html" method="post">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="role">Role</label>
+            <select id="role" name="role" required onchange="updateFormAction()">
+                <option value="" selected disabled>Please select a role</option>
+                <option value="support">Support</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="staff">Staff</option>
+                <option value="sponsor">Sponsor</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

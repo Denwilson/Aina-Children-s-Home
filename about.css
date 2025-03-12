@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #ff6f00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about, .history, .services, .testimonials, .get-involved {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    background: #ffcc80;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+blockquote {
+    font-style: italic;
+    background: #ffecb3;
+    padding: 15px;
+    border-left: 5px solid #ff6f00;
+    margin: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    background: #ff6f00;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e65100;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+s
